@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 95%; /* #f2f2f2 - Light Gray */
+    --foreground: 222 82% 15%; /* Darker blue for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222 82% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 82% 15%;
+
+    --primary: 207 60% 53%; /* #3498db - Calm Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 210 40% 93%; /* Light gray-blue (original, for elements other than main background) */
+    --secondary-foreground: 222 82% 15%;
+
+    --muted: 210 40% 88%; /* Muted gray-blue */
+    --muted-foreground: 215 25% 45%; /* Darker muted text */
+
+    --accent: 145 63% 49%; /* #2ecc71 - Green */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 72% 51%; /* Standard red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%; /* Light blue-gray border */
+    --input: 210 30% 88%;
+    --ring: 207 60% 53%; /* Primary color for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 207 60% 60%; /* Brighter Blue (primary-like) */
+    --chart-2: 145 63% 55%; /* Brighter Green (accent-like) */
+    --chart-3: 250 60% 65%; /* Lighter Purple */
+    --chart-4: 30 80% 55%;  /* Orange */
+    --chart-5: 350 75% 60%; /* Pink/Reddish */
+
+    /* Sidebar specific colors - keeping defaults from original globals.css as sidebar component is not used */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 82% 8%; /* Dark blue */
+    --foreground: 0 0% 95%; /* Light gray text */
+
+    --card: 222 82% 10%; /* Slightly lighter dark blue for cards */
+    --card-foreground: 0 0% 95%;
+
+    --popover: 222 82% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 207 60% 60%; /* Brighter blue for dark mode */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 20%; /* Darker muted blue */
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 217 33% 25%; /* Muted blue */
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 145 63% 55%; /* Brighter green for dark mode */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 40%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 207 60% 60%;
+    
+    /* Chart colors for dark mode */
+    --chart-1: 207 60% 65%;
+    --chart-2: 145 63% 60%;
+    --chart-3: 250 60% 70%;
+    --chart-4: 30 80% 65%;
+    --chart-5: 350 75% 70%;
+
+     /* Sidebar specific colors - keeping defaults from original globals.css as sidebar component is not used */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-geist-sans), sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
